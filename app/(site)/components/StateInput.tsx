@@ -12,6 +12,7 @@ export default function StateInput() {
   return (
     <>
       <div className="flex flex-col h-full w-full">
+        <div>在下方表格中貼上轉蛋內容</div>
         <textarea
           title="GachaLists"
           placeholder="複製轉蛋內容..."

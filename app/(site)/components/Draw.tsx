@@ -148,21 +148,33 @@ export default function Draw(props: DrawProps) {
         <br />
         <div className="flex justify-between">
           <button
-            className="border-solid border-2 border-black bg-white p-2 rounded-sm hover:bg-[#f7c6c6]"
+            className={
+              error || draw || !state
+                ? "border-solid border-2 border-gray-500 bg-white text-gray-500 p-2 rounded-sm"
+                : "border-solid border-2 border-black bg-white p-2 rounded-sm hover:bg-[#f7c6c6]"
+            }
             onClick={() => pick(1)}
             disabled={error || draw || !state ? true : false}
           >
             抽1次
           </button>
           <button
-            className="border-solid border-2 border-black bg-white p-2 rounded-sm hover:bg-[#f7c6c6]"
+            className={
+              error || draw || !state
+                ? "border-solid border-2 border-gray-500 bg-white text-gray-500 p-2 rounded-sm"
+                : "border-solid border-2 border-black bg-white p-2 rounded-sm hover:bg-[#f7c6c6]"
+            }
             onClick={() => pick(10)}
             disabled={error || draw || !state ? true : false}
           >
             抽10次
           </button>
           <button
-            className="border-solid border-2 border-black bg-white p-2 rounded-sm hover:bg-[#f7c6c6]"
+            className={
+              error || draw || !state
+                ? "border-solid border-2 border-gray-500 bg-white text-gray-500 p-2 rounded-sm"
+                : "border-solid border-2 border-black bg-white p-2 rounded-sm hover:bg-[#f7c6c6]"
+            }
             onClick={() => pick(100)}
             disabled={error || draw || !state ? true : false}
           >
