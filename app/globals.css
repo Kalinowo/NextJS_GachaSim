@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* :root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+} */
+
+.gachaRotate.active {
+  animation: gachaRotate 1.5s linear forwards;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes gachaRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.dropBall.active {
+  animation: gachaDrop 0.5s 1.5s ease-in-out forwards;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes gachaDrop {
+  0% {
+    transform: translate(35px, 40px);
+  }
+  100% {
+    transform: translate(35px, 85px) rotate(-90deg);
+  }
+}
+
+.gachaContainer.active g:nth-child(1) {
+  animation: gachaShake 1.5s linear forwards;
+  transform-origin: center;
+  transform-box: fill-box;
+  /* transform: translate(35px, -10px) rotate(248deg); */
+}
+.gachaContainer.active g:nth-child(2) {
+  animation: gachaShake 1.5s linear forwards;
+  transform-origin: center;
+  transform-box: fill-box;
+  /* transform: translate(22px, 10px) rotate(257deg); */
+}
+
+.gachaContainer.active g:nth-child(3) {
+  animation: gachaShake 1.5s linear forwards;
+  transform-origin: center;
+  transform-box: fill-box;
+  /* transform: translate(0px, 10px) rotate(-60deg); */
+}
+
+.gachaContainer.active g:nth-child(4) {
+  animation: gachaShake 1.5s linear forwards;
+  transform-origin: center;
+  transform-box: fill-box;
+  /* transform: translate(45px, 10px) rotate(-76deg); */
+}
+
+.gachaContainer.active g:nth-child(5) {
+  animation: gachaShake 1.5s linear forwards;
+  transform-origin: center;
+  transform-box: fill-box;
+  /* transform: translate(68px, 10px) rotate(244deg); */
+}
+
+@keyframes gachaShake {
+  0%,
+  50% {
+    transform: translate(var(--x), var(--y)) rotate(var(--deg));
+  }
+  25%,
+  75% {
+    transform: translate(var(--x), var(--y)) rotate(calc(var(--deg) + 10deg));
+  }
+  100% {
+    transform: translate(var(--x), calc(var(--y) + 5px)) rotate(var(--deg));
+  }
+}
+
+.poring.active {
+  animation: bouncingPoring 1.5s linear forwards;
+  transform-origin: bottom;
+  transform-box: fill-box;
+}
+
+@keyframes bouncingPoring {
+  0%,
+  50%,
+  100% {
+    transform: translate(var(--x), var(--y)) scale(0.8);
+  }
+  25%,
+  75% {
+    transform: translate(var(--x), var(--y)) scale(0.8, 0.7);
+  }
+}
